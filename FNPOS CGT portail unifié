@@ -1,0 +1,10 @@
+# 1. Créer le dépôt (si gh CLI installé, sinon via github.com)
+gh repo create fnposcgt/fnpos-portail-unifie --public \
+  --description "FNPOS-CGT — Portail fédéral unifié · PWA · 8 secteurs"
+
+# 2. Pousser le code
+cd /tmp/fnpos-deploy   # ou dossier où vous avez placé index.html + sw.js + manifest.json
+git remote add origin https://github.com/fnposcgt/fnpos-portail-unifie.git
+git push -u origin main
+
+# 3. Activer GitHub Pages : Settings > Pages > Deploy from branch > main > / (root)
